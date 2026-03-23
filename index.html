@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs">
+  <meta property="og:title" content="POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs"/>
+  <meta property="og:description" content="Native dual-mode MLLM with dynamic visual token scaling (Focus/Standby) for efficient long-form and streaming visual understanding."/>
+  <meta property="og:url" content=""/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/images/teaser.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="POINTS-Long">
+  <meta name="twitter:description" content="Adaptive Dual-Mode Visual Reasoning in MLLMs (Focus/Standby) for scalable long-form & streaming visual understanding.">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/teaser.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="MLLM, video understanding, visual tokens, token compression, streaming inference, KV cache, efficient inference">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs</title>
+  <link rel="icon" type="image/x-icon" href="./static/images/visionary.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs</h1>
+            <div class="publication-venue-row">
+              <span class="venue-badge">CVPR 2026</span>
+            </div>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                Haicheng Wang<sup>1,2</sup><sup>*</sup>, </span>
+              <span class="author-block">
+                Yuan Liu<sup>2</sup><sup>*†</sup>, </span>
+              <span class="author-block">
+                Yikun Liu<sup>1,2</sup><sup>*</sup>, </span>
+              <span class="author-block">
+                Zhemeng Yu<sup>1</sup>, </span>
+              <span class="author-block">
+                Zhongyin Zhao<sup>2</sup>, </span>
+              <span class="author-block">
+                Yangxiu You<sup>2</sup>, </span>
+              <span class="author-block">
+                Zilin Yu<sup>2</sup>, </span>
+              <span class="author-block">
+                Le Tian<sup>2</sup>, </span>
+              <span class="author-block">
+                Xiao Zhou<sup>2</sup>, </span>
+              <span class="author-block">
+                Jie Zhou<sup>2</sup>, </span>
+              <span class="author-block">
+                Weidi Xie<sup>1</sup><sup>†</sup>, </span>
+              <span class="author-block">
+                Yanfeng Wang<sup>1</sup><sup></sup></span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block"><sup>1</sup>School of Artificial Intelligence, Shanghai Jiao Tong University, China</span><br>
+                    <span class="author-block"><sup>2</sup>WeChat AI, Tencent, China</span>
+                    <span class="eql-cntrb"><small><br><sup>*</sup>Core contributor.&nbsp;&nbsp;<sup>†</sup>Corresponding author.</small></span>
+                  </div>
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="static/images/CVPR_2026_POINTS_Long.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper (PDF)</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+                    <!-- <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span> -->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="#" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code & Model (Coming Soon)</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <!-- Add arXiv / project links here if available -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="vertical-image-display">
+        <!-- <div class="columns is-centered has-text-centered"><h2 class="title"></h2></div> -->
+        <div class="image-item">
+          <img src="./static/images/teaser.png" alt="Teaser" 
+              style="width: 60%; max-width: 600px; display: block; margin: 0 auto;"/>
+          <h2 class="subtitle" style="text-align: left;">
+            <figcaption>
+              <strong>POINTS-Long bridges the gap between human perception and MLLM scalability.</strong> Inspired by the human visual system, POINTS-Long introduces two complementary modes—high-fidelity <em>Focus</em> and efficient <em>Standby</em>—to dynamically trade off accuracy and cost for long-form and streaming visual understanding.
+            </figcaption>
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section hero ">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Multimodal Large Language Models (MLLMs) have recently demonstrated remarkable capabilities in cross-modal understanding and generation. However, the rapid growth of visual token sequences—especially in long-video and streaming scenarios—poses a major challenge to scalability and real-world deployment. We introduce POINTS-Long, a native dual-mode MLLM featuring dynamic visual token scaling inspired by the human visual system. The model supports two complementary perception modes: focus mode and standby mode, enabling users to dynamically trade off efficiency and accuracy during inference. On fine-grained visual tasks, the focus mode retains optimal performance, while on long-form general visual understanding, the standby mode retains 97.7–99.7% of the original accuracy using only 1/40–1/10 of the visual tokens. Moreover, POINTS-Long natively supports streaming visual understanding via a dynamically detachable KV-cache design, allowing efficient maintenance of ultra-long visual memory. Our work provides new insights into the design of future MLLMs and lays the foundation for adaptive and efficient long-form visual understanding.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Key Contributions</h2>
+        <div class="content">
+          <ul>
+            <li><strong>Native dual-mode perception</strong>: a single MLLM that supports <em>Focus</em> (high-fidelity) and <em>Standby</em> (high-compression) visual understanding, enabling an explicit efficiency–accuracy choice at inference.</li>
+            <li><strong>Two-stage post-training</strong>: (i) visual distillation/alignment by training only new modules; (ii) LLM mode adaptation with a 2-forward objective to preserve Focus performance while learning Standby.</li>
+            <li><strong>Deployment-friendly design</strong>: asymmetric attention masking compatible with modern inference kernels (e.g., FlashAttention) and practical serving frameworks (e.g., SGLang).</li>
+            <li><strong>Streaming-ready memory</strong>: detachable KV-cache strategy that retains a high-fidelity local window while migrating compact standby-cache to a long-term memory bank.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">At a Glance</h2>
+        <div class="content">
+          <div class="glance-grid">
+            <div class="glance-card">
+              <div class="glance-kpi">1/40 – 1/10</div>
+              <div class="glance-label">visual tokens (Standby vs. original)</div>
+            </div>
+            <div class="glance-card">
+              <div class="glance-kpi">97.7% – 99.7%</div>
+              <div class="glance-label">performance retained on long-form video benchmarks</div>
+            </div>
+            <div class="glance-card">
+              <div class="glance-kpi">Up to 6.2×</div>
+              <div class="glance-label">generation throughput (serving-side)</div>
+            </div>
+          </div>
+          <p class="is-size-7 has-text-grey">
+            Numbers are summarized from the paper tables shown below (e.g., OpenCompass video benchmark and real-world speed-up analysis).
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vertical Image Display -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="vertical-image-display">
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Method</h2></div>
+        <div class="image-item">
+          <img src="./static/images/framework.png" alt="Architecture Overview"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>POINTS-Long architecture.</strong> A dual-path ViT introduces a small set of learnable standby tokens while keeping the original focus pathway unchanged. A two-stage post-training pipeline (visual distillation/alignment, then LLM mode adaptation) equips the model with an efficient Standby mode without harming the Focus mode.
+          </figcaption>
+          </h2>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Streaming Memory</h2></div>
+        <div class="image-item">
+          <img src="./static/images/stream.png" alt="Streaming Inference"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>Streaming inference with detachable KV cache.</strong> POINTS-Long maintains a high-fidelity local window (Focus) while migrating compact standby-cache into a long-term memory bank, enabling ultra-long streaming visual understanding without expensive re-prefills.
+          </figcaption>
+          </h2>
+        </div>
+        <div class="columns is-centered has-text-centered"><h2 class="title is-3">Main Results</h2></div>
+        <div class="image-item">
+          <img src="./static/images/table1.PNG" alt="OpenCompass Video Benchmark"/>
+          <h2 class="subtitle">
+            <figcaption>
+              <strong>OpenCompass video benchmark.</strong> Standby mode retains 97.7–99.7% performance using only 2.5–10% of the original tokens, while focus mode preserves (and slightly improves) the original performance.
+            </figcaption>
+          </h2>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/table2.PNG" alt="More Video Benchmarks"/>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/table3.png" alt="Scalability of Frames"/>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/table4.png" alt="Image Benchmarks"/>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/table5.png" alt="Streaming Understanding"/>
+        </div>
+        <div class="image-item">
+          <img src="./static/images/table6.png" alt="Ablation Study"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Vertical Image Display -->
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{wang2026points_long (not yet available),
+        title={POINTS-Long: Adaptive Dual-Mode Visual Reasoning in MLLMs},
+        author={Wang, Haicheng and Liu, Yuan and Liu, Yikun and Yu, Zhemeng and Zhao, Zhongyin and You, Yangxiu and Yu, Zilin and Tian, Le and Zhou, Xiao and Zhou, Jie and Xie, Weidi and Wang, Yanfeng},
+        booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+        year={2026}
+}
+      </code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+<section class="section" id="Contact">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">Contact</h2>
+        <div class="content">
+          <p>If you have any questions, feel free to reach out:</p>
+          <ul>
+            <li>
+              <strong>Haicheng Wang</strong>:
+              <a href="mailto:1345087470@qq.com">1345087470@qq.com</a>,
+              <a href="mailto:anakin_skywalker@sjtu.edu.cn">anakin_skywalker@sjtu.edu.cn</a>
+            </li>
+            <li>
+              <strong>Yikun Liu</strong>:
+              <a href="mailto:yikunliu@sjtu.edu.cn">yikunliu@sjtu.edu.cn</a>
+            </li>
+            <li>
+              <strong>Yuan Liu</strong>:
+              <a href="mailto:bensenliu@tencent.com">bensenliu@tencent.com</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>

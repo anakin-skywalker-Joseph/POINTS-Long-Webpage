@@ -1,0 +1,208 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+/* Venue badge under the title. */
+.publication-venue-row {
+  margin-top: 0.6rem;
+  margin-bottom: 1.0rem;
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #ff3860, #ffdd57);
+  color: #111;
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.venue-subtitle {
+  display: block;
+  margin-top: 0.5rem;
+  color: #4a4a4a;
+  font-family: 'Google Sans', sans-serif;
+  font-size: 0.98rem;
+}
+
+/* "At a Glance" cards */
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.glance-card {
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 14px;
+  padding: 1rem 1rem;
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.glance-kpi {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 800;
+  font-size: 1.4rem;
+  line-height: 1.2;
+}
+
+.glance-label {
+  margin-top: 0.35rem;
+  color: #4a4a4a;
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .glance-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Project-page helpers (kept lightweight on purpose). */
+.vertical-image-display .image-item {
+  margin-bottom: 50px;
+}
+
+.vertical-image-display img {
+  width: 70%;
+  height: auto;
+  display: block;
+  margin-left: calc(50% - 35%);
+}
+
+.vertical-image-display .subtitle {
+  width: 70%;
+  display: block;
+  margin-left: calc(50% - 35%);
+}
+
+figcaption {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.hero.is-small {
+  margin-bottom: -5rem;
+  padding-bottom: 0;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  padding: 20px;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+.slider-pagination .slider-page {
+  background: #000000;
+}
+
+.eql-cntrb { 
+  font-size: smaller;
+}
+
+
+
