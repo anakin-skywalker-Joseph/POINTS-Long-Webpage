@@ -10,18 +10,18 @@ body {
 
 .venue-badge {
   display: inline-block;
-  padding: 0.45rem 0.9rem;
+  padding: 0.5rem 1.05rem;
   border-radius: 999px;
-  background: linear-gradient(90deg, #ff3860, #ffdd57);
-  color: #111;
+  background: linear-gradient(90deg, #7b1fa2, #d32f2f 55%, #f57c00);
+  color: #fff;
   font-family: 'Google Sans', sans-serif;
-  font-weight: 800;
-  font-size: 1.15rem;
-  letter-spacing: 0.08em;
+  font-weight: 900;
+  font-size: 1.22rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  border: 2px solid rgba(17, 17, 17, 0.12);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.18);
-  text-shadow: 0 2px 0 rgba(255, 255, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 16px 30px rgba(80, 0, 0, 0.26);
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
 
 .venue-subtitle {
